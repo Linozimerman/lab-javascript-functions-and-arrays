@@ -56,7 +56,42 @@ function sumNumbers(numbers) {
 
 
 // Iteration #3.1 Bonus:
-function sum() {}
+const mixedArr = [6, 12, 'miami', 1, true, 'barca', '200', 'lisboa', 8, 10];
+
+// should return: 57
+
+
+///////////////i couldn't make it
+let loQueSuma = 0;
+function sum() {
+    if ( mixedArr.length === 0) {
+        return 0;}
+
+    for (let i = 0; i < mixedArr.length; i++) {
+    if (typeof mixedArr[i] === 'object') {
+        throw new Error("Error message goes here");
+    } else if (typeof mixedArr[i] !== 'object') {
+        if (typeof mixedArr[i] == 'number'){
+            loQueSuma += mixedArr[i];
+        }
+        if (typeof mixedArr[i] == 'string'){
+            loQueSuma += mixedArr[i];
+        }
+        if ( mixedArr[i] == true){
+            loQueSuma += 1;
+        }
+        if ( mixedArr[i] == false){
+            loQueSuma += 0;
+        }
+        }
+    }
+    return loQueSuma
+}
+console.log(sum(mixedArr));
+
+
+
+
 
 
 
@@ -65,6 +100,7 @@ function sum() {}
 const numbersAvg = [2, 6, 9, 10, 7, 4, 1, 9];
 
 function averageNumbers() {}
+
 
 
 // Level 2: Array of strings
